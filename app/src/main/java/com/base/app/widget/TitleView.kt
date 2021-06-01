@@ -19,7 +19,7 @@ class TitleView : ConstraintLayout {
     private val rightText by lazy { findViewById<TextView>(R.id.tv_right) }
     private val rightImg by lazy { findViewById<ImageView>(R.id.iv_right) }
     private val titleTextView by lazy { findViewById<TextView>(R.id.tv_center) }
-    private val clTitleRoot by lazy { findViewById<ConstraintLayout>(R.id.cl_title_root) }
+    private val clTitleRoot by lazy { findViewById<ConstraintLayout>(R.id.title_view_id) }
     private var leftClick: (() -> Unit)? = null
     private var rightClick: (() -> Unit)? = null
 

@@ -1,14 +1,13 @@
 package com.base.app.base
 
-import android.R
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.base.app.App
+import com.base.app.R
 import com.base.app.ext.autoNightMode
 import com.base.app.ext.ui
 import com.base.app.lifecycle.ActivityLifecycleable
@@ -44,8 +43,10 @@ open class BaseActivity : AppCompatActivity(), ActivityLifecycleable {
 
     fun autoPadding() {
         if (isAutoPadding()) {
-            val contentView = findViewById<View>(R.id.content) as ViewGroup
-            contentView.setPadding(0, App.statusHeight, 0, 0)
+            val titleView = findViewById<View>(R.id.title_view_id)
+            if (titleView != null) {
+                titleView.setPadding(0, App.statusHeight, 0, 0)
+            }
         }
     }
 
